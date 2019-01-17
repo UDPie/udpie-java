@@ -28,8 +28,6 @@ public class Main {
             logger = UDPie.logger();
             logger.error(e.getMessage(), e);
         }
-
-
     }
 }
 
