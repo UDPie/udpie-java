@@ -9,18 +9,20 @@ import java.net.UnknownHostException;
 
 public class UDPie {
 
+    public static final int DEFAULT_PORT = 41234;
+    private static final String DEFAULT_ADDRESS = "127.0.0.1";
     private static UDPieClient client = null;
 
     public static void connect() throws SocketException, UnknownHostException {
-        connect("127.0.0.1", 41234);
+        connect(DEFAULT_ADDRESS, DEFAULT_PORT);
     }
 
     public static void connect(int port) throws SocketException, UnknownHostException {
-        connect("127.0.0.1", port);
+        connect(DEFAULT_ADDRESS, port);
     }
 
     public static void connect(String address) throws SocketException, UnknownHostException {
-        connect("127.0.0.1", 41234);
+        connect(address, DEFAULT_PORT);
     }
 
     public static void connect(String address, int port, String section) throws SocketException, UnknownHostException {

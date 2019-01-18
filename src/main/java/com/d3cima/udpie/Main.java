@@ -1,8 +1,6 @@
 package com.d3cima.udpie;
 
-import com.d3cima.udpie.services.CounterService;
 import com.d3cima.udpie.services.LoggerService;
-import com.d3cima.udpie.services.TimerService;
 
 import java.io.IOException;
 import java.net.SocketException;
@@ -15,8 +13,8 @@ public class Main {
         try {
             UDPie.connect();
             logger = UDPie.logger();
-            logger.alert("hello");
-            UDPie.section("bob");
+            logger.alert("this is an alert");
+            UDPie.section("section_test");
             throw new Exception("shit happens");
         } catch (UnknownHostException e) {
             e.printStackTrace();
